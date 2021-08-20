@@ -1,6 +1,6 @@
 # VARS
 PROFILE=~/.bash_profile
-BASHRC=~/.bash_rc
+BASHRC=~/.bashrc
 
 # GIT ALIASES
 alias ga="git add"
