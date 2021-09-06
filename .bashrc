@@ -6,23 +6,36 @@ BASHRC=~/.bashrc
 alias ga="git add"
 alias gc="git commit -m"
 alias gac="git add . && git commit -m"
-alias gpush="git push -u origin HEAD"
+alias gp="git push origin HEAD"
+function glazy() {
+    git add . 
+    git commit -m "$1"
+    git push origin HEAD
+}
+
+alias gpl="git pull"
+
+alias gbr="git branch"
+alias gbrD="git branch -D"
+
 alias gst="git status"
-# can improve my git log
-alias gl="git log --oneline"
+alias gl="git log --oneline"  # could be improved
+alias gdf="git diff"
+
 alias gco="git checkout"
 alias gcob="git checkout -b"
-alias glazy="git add . && git commit -m 'lazy commit' && git push origin HEAD"
-alias gdiff="git diff"
-# what does this do? 
+
+# what does this do exactly? I know it has something to do with unstaged files 
 alias gpristine="git reset --hard && git clean -dfx" 
 alias gamend="git commit --amend -m"
-# more branch aliases, rename, delete?
-alias gbr="git branch"
-# alias for rebasing?
-# alias for resetting
-# add a git add . before this? When you resolve conflict, requires you to add file"
-alias grbcont="git rebase --continue"
+
+alias gunstage="git reset --soft HEAD^"
+alias gdiscard="git reset --hard"
+
+alias grb="git rebase"
+alias grbi="git rebase --interactive"
+alias grba="git rebase --abort"
+alias grbc="git rebase --continue"
 
 # BASH ALIASES
 alias mytmp="echo hello world"
