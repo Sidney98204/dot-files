@@ -7,6 +7,7 @@ alias ga="git add"
 alias gc="git commit -m"
 alias gac="git add . && git commit -m"
 alias gp="git push origin HEAD"
+alias gpf="git push --force-with-lease origin HEAD"
 function glazy() {
     git add . 
     git commit -m "$1"
@@ -36,6 +37,8 @@ alias grb="git rebase"
 alias grbi="git rebase --interactive"
 alias grba="git rebase --abort"
 alias grbc="git rebase --continue"
+
+alias gs="git stash"
 
 # BASH ALIASES
 alias mytmp="echo hello world"
